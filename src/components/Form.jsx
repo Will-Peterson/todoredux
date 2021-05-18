@@ -1,7 +1,5 @@
 import React from 'react';
-import TextField from "@material-ui/core/TextField";
 import {v4} from 'uuid';
-import IconButton from '@material-ui/core/IconButton';
 
 const Form = ({inputProject, setInputProject, projects, setProjects}) => {
 
@@ -29,7 +27,7 @@ const Form = ({inputProject, setInputProject, projects, setProjects}) => {
     return (
         <>
             <form noValidate autoComplete="off" onSubmit={submitProjectInput}>
-            <TextField
+            <textfield
                 inputProps={{maxLength: 30}}
                 label="Add Project"
                 variant="filled"
@@ -38,9 +36,9 @@ const Form = ({inputProject, setInputProject, projects, setProjects}) => {
                 value={inputProject}
                 onChange={handleInputProject}
                 />
-            <IconButton aria-label='delete' type='submit' onClick={submitProjectInput} >
+            <button aria-label='delete' type='submit' onClick={submitProjectInput} >
                 <span style={{color: 'white', fontWeight: 'bold'}}>+</span>
-            </IconButton>
+            </button>
             <br/>
             <div style={{color: 'white', marginBottom: '50px', float: 'right', fontSize: '.5rem'}}>{30 - inputProject.length} characters remaining</div>
             </form>

@@ -19,3 +19,4 @@ const ProjectList = ({projects, updateProject, completedProject, deleteProject})
 } 
 
 export default ProjectList;
+ 

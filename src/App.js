@@ -2,9 +2,6 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import ProjectList from './components/ProjectList';
 import Form from './components/Form';
-import theme from "./theme";
-import { ThemeProvider } from "@material-ui/core/styles";
-import Container from '@material-ui/core/Container';
 
 function App() {
   const [inputProject, setInputProject] = useState('');
@@ -36,8 +33,6 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Container maxWidth='md'>
           <h1 style={{ marginBottom: "100px", color: 'white' }}>My Projects</h1>
           <Form 
             inputProject={inputProject} 
@@ -50,8 +45,6 @@ function App() {
             completedProject={completedProject}
             deleteProject={deleteProject}
             />
-        </Container>
-      </ThemeProvider>
     </>
   );
 }
