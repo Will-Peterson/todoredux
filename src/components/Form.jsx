@@ -1,5 +1,8 @@
 import React from 'react';
 import {v4} from 'uuid';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 const Form = ({inputProject, setInputProject, projects, setProjects}) => {
 
@@ -26,6 +29,18 @@ const Form = ({inputProject, setInputProject, projects, setProjects}) => {
 
     return (
         <>
+
+<InputGroup className="mb-3">
+    <FormControl
+      placeholder="todo"
+      aria-label="todo"
+      aria-describedby="basic-addon2"
+    />
+    <InputGroup.Append>
+      <Button variant="outline-secondary">Button</Button>
+    </InputGroup.Append>
+  </InputGroup>
+
             <form noValidate autoComplete="off" onSubmit={submitProjectInput}>
             <textfield
                 inputProps={{maxLength: 30}}
