@@ -14,9 +14,9 @@ const Project = ({project, completedProject, deleteProject}) => {
         <div>
             <button variant="contained" color="primary" style={{color: project.completed ? '#888' : null, textDecoration: project.completed ? 'line-through' : null}} >
           <div className="project-container">{project.task}</div>
-            <button onClick={completedHandler}>
+            <button onClick={completedHandler}>Completed
             </button>
-            <button onClick={deleteHandler}>
+            <button onClick={deleteHandler}>Delete
             </button>
         </button>
         </div>
